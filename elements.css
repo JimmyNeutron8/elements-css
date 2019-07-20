@@ -21,8 +21,13 @@
 :root {
   --main-bg-color: #fafafa;
   --main-fg-color: #444;
-  --input-normal-color: #dadada;
-  --input-focus-color: #5cf;
+  --main-muted-color: #aaa;
+
+  --main-border-color: #bbb;
+  --main-focus-color: #5cf;
+
+  --input-bg-color: #0000;
+  --input-fg-color: #444;
 }
 
 /* RESET */
@@ -30,7 +35,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
 }
 
 *, *:before, *:after {
@@ -64,7 +69,15 @@ img {
   margin: 0;
 }
 
-.row {
+.row-xs {
+  display: flex;
+  flex-direction: row;
+}
+
+.row-sm,
+.row-md,
+.row-lg,
+.row-xl {
   display: flex;
   flex-direction: column;
 }
@@ -80,6 +93,21 @@ img {
 
 .col-half {
   flex: 0.5 1 0;
+}
+
+.align-center {
+  text-align: center;
+  align-items: center;
+}
+
+.align-left {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.align-right {
+  text-align: right;
+  align-items: right;
 }
 
 /* BASIC COLORS AND STYLES */
@@ -129,12 +157,13 @@ p {
 
 input,
 select {
-  border: 1px solid var(--input-normal-color);
-  border-radius: 10px;
-  padding: 0.7em;
-  font-size: 1em;
   margin: 0.5em;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--main-border-color);
+  border-radius: 6px;
+  padding: 0.7em;
+  background-color: var(--input-bg-color);
+  color: var(--input-fg-color);
+  font-size: 1em;
 }
 
 input[type="button"] {
@@ -143,13 +172,13 @@ input[type="button"] {
 
 input:focus,
 select:focus {
-  box-shadow: 0 0 0 1px var(--input-focus-color);
-  border-color: var(--input-focus-color);
+  box-shadow: 0 0 1px 2px var(--main-focus-color);
+  border-color: var(--main-focus-color);
 }
 
 /* TEXT CLASSES */
-.center-text {
-  text-align: center;
+.muted-text {
+  color: var(--main-muted-color);
 }
 
 /* MEDIA QUERIES */
@@ -163,6 +192,10 @@ select:focus {
     max-width: 500px;
   }
 
+  .row-sm {
+    flex-direction: row;
+  }
+
 }
 
 /* Medium devices */
@@ -174,7 +207,7 @@ select:focus {
     max-width: 700px;
   }
 
-  .row {
+  .row-md {
     flex-direction: row;
   }
 
@@ -189,6 +222,10 @@ select:focus {
     max-width: 900px;
   }
 
+  .row-lg {
+    flex-direction: row;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -197,6 +234,10 @@ select:focus {
 
   .container {
     max-width: 1150px;
+  }
+
+  .row-xl {
+    flex-direction: row;
   }
 
 }
