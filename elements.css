@@ -133,6 +133,8 @@ select {
   border-radius: 10px;
   padding: 0.7em;
   font-size: 1em;
+  margin: 0.5em;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 input[type="button"] {
@@ -141,8 +143,8 @@ input[type="button"] {
 
 input:focus,
 select:focus {
-  border: 1px solid var(--input-focus-color);
-  box-shadow: 
+  box-shadow: 0 0 0 1px var(--input-focus-color);
+  border-color: var(--input-focus-color);
 }
 
 /* TEXT CLASSES */
