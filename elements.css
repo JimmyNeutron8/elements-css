@@ -1,0 +1,200 @@
+/* Elements.css - A simple, bootstrap-inspired CSS framework
+*
+* CONTENTS:
+*  Variables
+*
+*  Reset
+*
+*  Layout (container, grid, etc.)
+*    Media Queries
+*    Small
+*    Medium
+*    Large
+*    Extra Large
+*
+*  Colors and Styles
+*
+*  Text Classes
+*/
+
+/* VARIABLES */
+:root {
+  --main-bg-color: #fafafa;
+  --main-fg-color: #444;
+  --input-normal-color: #dadada;
+  --input-focus-color: #5cf;
+}
+
+/* RESET */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  outline: none;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* LAYOUT */
+
+.container {
+  margin: 0 auto;
+  padding: 1em 15px;
+}
+
+.container-fluid {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  flex: 1 1 0;
+  padding: 0 1em;
+}
+
+.col-double {
+  flex: 2 1 0;
+}
+
+.col-half {
+  flex: 0.5 1 0;
+}
+
+/* BASIC COLORS AND STYLES */
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-fg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2.0rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1.0rem;
+}
+
+p {
+  line-height: 1.6em;
+  margin-bottom: 1.0em;
+}
+
+input,
+select {
+  border: 1px solid var(--input-normal-color);
+  border-radius: 10px;
+  padding: 0.7em;
+  font-size: 1em;
+}
+
+input[type="button"] {
+  padding: 0.7em 1.3em;
+}
+
+input:focus,
+select:focus {
+  border: 1px solid var(--input-focus-color);
+  box-shadow: 
+}
+
+/* TEXT CLASSES */
+.center-text {
+  text-align: center;
+}
+
+/* MEDIA QUERIES */
+
+/* Small devices */
+@media (min-width: 576px) {
+
+  /* LAYOUT */
+
+  .container {
+    max-width: 500px;
+  }
+
+}
+
+/* Medium devices */
+@media (min-width: 768px) {
+
+  /* LAYOUT */
+
+  .container {
+    max-width: 700px;
+  }
+
+  .row {
+    flex-direction: row;
+  }
+
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+
+  /* LAYOUT */
+
+  .container {
+    max-width: 900px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  /* LAYOUT */
+
+  .container {
+    max-width: 1150px;
+  }
+
+}
