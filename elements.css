@@ -28,6 +28,9 @@
 
   --input-bg-color: #0000;
   --input-fg-color: #444;
+
+  --button-bg-color: #2ad;
+  --button-fg-color: #fafafa;
 }
 
 /* RESET */
@@ -107,7 +110,7 @@ img {
 
 .align-right {
   text-align: right;
-  align-items: right;
+  align-items: flex-end;
 }
 
 /* BASIC COLORS AND STYLES */
@@ -157,7 +160,7 @@ p {
 
 input,
 select {
-  margin: 0.5em;
+  margin: 0.5em 0;
   border: 1px solid var(--main-border-color);
   border-radius: 6px;
   padding: 0.7em;
@@ -167,13 +170,22 @@ select {
 }
 
 input[type="button"] {
+  border: none;
   padding: 0.7em 1.3em;
+  background-color: var(--button-bg-color);
+  color: var(--button-fg-color);
 }
 
 input:focus,
 select:focus {
   box-shadow: 0 0 1px 2px var(--main-focus-color);
   border-color: var(--main-focus-color);
+}
+
+label {
+  display: block;
+  margin: 0.8em 0;
+  margin-bottom: 0.2em;
 }
 
 /* TEXT CLASSES */
@@ -196,6 +208,11 @@ select:focus {
     flex-direction: row;
   }
 
+  .row-sm.align-center {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
 }
 
 /* Medium devices */
@@ -209,6 +226,11 @@ select:focus {
 
   .row-md {
     flex-direction: row;
+  }
+
+  .row-md.align-center {
+    justify-content: center;
+    align-items: flex-start;
   }
 
 }
@@ -226,6 +248,11 @@ select:focus {
     flex-direction: row;
   }
 
+  .row-lg.align-center {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -238,6 +265,11 @@ select:focus {
 
   .row-xl {
     flex-direction: row;
+  }
+
+  .row-xl.align-center {
+    justify-content: center;
+    align-items: flex-start;
   }
 
 }
